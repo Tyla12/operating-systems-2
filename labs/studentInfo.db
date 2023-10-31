@@ -14,7 +14,7 @@ CREATE TABLE studentinfo (
 );
 
 -- Insert sample studentsManagement
-INSERT INTO students (name, age, gender, course) VALUES
+INSERT INTO studentinfo (name, age, gender, course) VALUES
     ('Palesa', 19, 'Female', 'Policing'),
     ('Siya', 22, 'Male', 'IT'),
 ('Zama', 20, 'Female', 'Computer systems'),
