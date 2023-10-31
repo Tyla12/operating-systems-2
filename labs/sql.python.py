@@ -1,7 +1,7 @@
 import mysql.connector
 
-# Function to connect to the MySQL database and fetch all records from the "students" table
-def fetch_student_records(host, user, password, database):
+# Function to connect to the MySQL database and fetch all records from the "studentinfo" table
+def fetch_students_Management(host, user, password, database):
     try:
         # Connect to the MySQL database
         connection = mysql.connector.connect(
@@ -16,8 +16,8 @@ def fetch_student_records(host, user, password, database):
 
             cursor = connection.cursor()
 
-            # Query to select all records from the "students" table
-            query = "SELECT * FROM students"
+            # Query to select all records from the "studentinfo" table
+            query = "SELECT * FROM studentinfo"
 
             # Execute the query
             cursor.execute(query)
@@ -47,10 +47,10 @@ if __name__ == "__main__":
     password = "your_password"
     database = "your_database"
 
-    column_names, student_records = fetch_student_records(host, user, password, database)
+    column_names, students_Management = fetch_students_Management(host, user, password, database)
 
     if student_records:
         print("Column Names:", column_names)
-        print("Student Records:")
-        for record in student_records:
+        print("Students Management:")
+        for record in students_Management:
             print(record)
