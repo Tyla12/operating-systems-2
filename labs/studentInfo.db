@@ -1,11 +1,11 @@
--- Create the "student_records" database if it doesn't exist
-CREATE DATABASE IF NOT EXISTS student_records;
+-- Create the "studentsManagement" database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS studentsManagement;
 
--- Switch to the "student_records" database
-USE student_records;
+-- Switch to the "studentsManagement" database
+USE studentsManagement;
 
--- Create the "students" table
-CREATE TABLE students (
+-- Create the "studentinfo" table
+CREATE TABLE studentinfo (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     age INT,
@@ -13,10 +13,13 @@ CREATE TABLE students (
     course VARCHAR(100) NOT NULL
 );
 
--- Insert sample student records
+-- Insert sample studentsManagement
 INSERT INTO students (name, age, gender, course) VALUES
     ('Palesa', 19, 'Female', 'Policing'),
-    ('Siya', 22, 'Male', 'IT');
+    ('Siya', 22, 'Male', 'IT'),
+('Zama', 20, 'Female', 'Computer systems'),
+('Tyla', 21, 'Male', 'Process control'),
+('Keo', 19, 'Female', 'Marking');
 
--- Display the data in the "students" table
-SELECT * FROM students;
+-- Display the data in the "studentinfo" table
+SELECT * FROM studentinfo;
