@@ -19,9 +19,9 @@ else
 fi
 
 #Prompts the user for the directory name and path
-read -p "Enter the directory name: " dir
+read -p "Enter the directory name: " $dir
 sleep 1
-read -p "Enter the directory path (e.g. /var/www/html/): " path
+read -p "Enter the directory path (e.g. /var/www/html/): " $path
 
 #Checks if the directory exist and removes its information
 if [ -d "$path/$dir" ]; then
